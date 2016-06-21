@@ -10,4 +10,4 @@
 [core]
 	excludesfile = ~/.gitignore.global
 [include]
-	path = ~/.dotfiles/locals/git/gitconfig.local
+	path = ~/.gitconfig.local
