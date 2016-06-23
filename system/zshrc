@@ -1,0 +1,15 @@
+# System
+source $HOME/dotfiles/system/aliases
+
+# Functions
+source $HOME/dotfiles/system/functions/colors.zsh
+source $HOME/dotfiles/system/functions/git.zsh
+
+# Config
+source $HOME/dotfiles/system/configs/colors
+source $HOME/dotfiles/system/configs/prompt
+source $HOME/dotfiles/system/configs/keybindings.zsh
+
+ENABLE_GIT_PROMPT=true
+
+alias canary='open -a "Google Chrome Canary" --args --disable-web-security --user-data-dir=$HOME/brandon.porter --allow-file-access-from-files --disable-extensions-http-throttling --allow-file-access --enable-file-cookies'

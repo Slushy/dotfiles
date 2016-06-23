@@ -1,10 +1,10 @@
 " Plugins ...
 
-call plug#begin('~/.config/nvim/plugged')
+" call plug#begin('~/.config/nvim/plugged')
 
-Plug 'scrooloose/nerdtree'
+" Plug 'scrooloose/nerdtree'
 
-call plug#end()
+" call plug#end()
 
 set tabstop=4
 

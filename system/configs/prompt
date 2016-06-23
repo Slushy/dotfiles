@@ -7,3 +7,7 @@ GIT_PROMPT_PREFIX=" %{$fg_bold[blue]%}(%{$fg[red]%}"
 GIT_PROMPT_SUFFIX="%{$reset_color%}"
 GIT_PROMPT_DIRTY="%{$fg[yellow]%}*%{$fg[blue]%})"
 GIT_PROMPT_CLEAN="%{$fg[blue]%})"
+
+setopt promptsubst 
+
+
