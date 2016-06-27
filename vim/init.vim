@@ -7,6 +7,7 @@ set nocompatible
 " ------------- PLUGINS -------------
 " ====================================
 call plug#begin('~/.config/nvim/plugged')
+" TODO: FIND MORE PLUGINS
 
 Plug 'scrooloose/nerdtree'
 

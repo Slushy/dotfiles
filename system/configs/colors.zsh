@@ -1,4 +1,3 @@
-#! /bin/zsh
 # A script to make using 256 colors in zsh less painful.
 # P.C. Shyamshankar <sykora@lucentbeing.com>
 # Copied from http://github.com/sykora/etc/blob/master/zsh/functions/spectrum/
@@ -35,3 +34,11 @@ function spectrum_bls() {
     print -P -- "$code: %{$BG[$code]%}$ZSH_SPECTRUM_TEXT%{$reset_color%}"
   done
 }
+
+# ls colors
+autoload -U colors && colors
+export LSCOLORS="GxFxcxdxbxegedabagacad"
+export CLICOLOR=1
+
+ls --color -d . &>/dev//null 2>&1 && alias ls='ls --color=tty' || alias ls='ls -G'
+

@@ -15,3 +15,4 @@ exec "hi Todo guifg=#C5C8C6 ctermfg=188"
 "delf <SID>X
 
 
+" TODO: Get colors working, setup separate vim setting files
