@@ -7,12 +7,19 @@ set nocompatible
 " ------------- PLUGINS -------------
 " ====================================
 call plug#begin('~/.config/nvim/plugged')
-" TODO: FIND MORE PLUGINS
 
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree'          " Directory browsing
+Plug 'scrooloose/syntastic'         " 
+Plug 'flazz/vim-colorschemes'       " Vim color schemes
+Plug 'kchmck/vim-coffee-script'     " Coffee script syntax/helpful functions
+Plug 'ctrlpvim/ctrlp.vim'           " Allows searching by filename
+Plug 'ap/vim-css-color'             " Views html colors as their actual colors
+Plug 'airblade/vim-gitgutter'       " Shows visuals at each line in a file that is modified
+Plug 'itchyny/lightline.vim'        " visual bar at bottom of each file
+Plug 'Shougo/deoplete.nvim'         " nvim autocomplete
+Plug 'edkolev/tmuxline.vim'         " visual bar at bottom of terminal 
 
 call plug#end()
-
 
 " ------------- GENERAL CONFIG -------------
 " ==========================================
@@ -20,7 +27,7 @@ set autoread				" Automatically reload a file when it's changed
 set backspace=indent,eol,start		" Make backspace work normally in insert mode
 set mouse=nvicr						" Set up mouse options: normal, visual, insert, command-line, hit-enter prompt
 set showmode						" Show the mode at the bottom
-set relativenumber
+set number                          " Shows number lines
 
 " ------------- COMMON CONFIG -------------
 " =========================================
@@ -53,17 +60,13 @@ set hlsearch
 set ignorecase
 set smartcase
 
-" Easier split navigation
-
 " Use <ctrl-w> [hjkl] to select the active split
 nnoremap <silent> <C-h> <C-w>h
 nnoremap <silent> <C-j> <C-w>j
 nnoremap <silent> <C-k> <C-w>k
 nnoremap <silent> <C-l> <C-w>l
 
-" Find a file
-" TODO: FIX THIS
-" FIX TODO COLOR!!!!!
+" \e toggles NERDTree, \f shows NERDTree at current file location
 nnoremap \e :Explore<CR>
 nnoremap <leader>e :NERDTreeToggle<CR>
 nnoremap <leader>f :NERDTreeFind<CR>

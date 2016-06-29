@@ -1,18 +1,31 @@
-hi clear
-syntax reset
-" set background=dark
+" map filetypes
+au BufNewFile,BufRead *.underscore setlocal filetype=hml
 
-exec "hi Todo guifg=#C5C8C6 ctermfg=188"
+" vim color scheme
+colorscheme molokai
 
-"fun <SID>X(group, fg)
-"endfun
+" Highlights the current cursorline 
+highlight CursorLine cterm=NONE ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
+set cursorline
 
-" Colors
+" Enables vim autocomplete
+let g:deoplete#enable_at_startup=1
 
-" todo color
-"call <SID>X("Todo", "#F5BB12")
+" Status bar at the bottom of each terminal
+" If update here, must call TmuxlineSnapshot
+let g:tmuxline_preset = {
+      \'a'    : '#S',
+      \'c'    : '#(whoami)',
+      \'win'  : '#I #W',
+      \'cwin' : '#I #W',
+      \'y'    : ['%l:%M %p', '%a', '%Y'],
+      \'z'    : '#H'}
 
-"delf <SID>X
-
-
-" TODO: Get colors working, setup separate vim setting files
+" Status bar at the bottom of each vim file
+let g:lightline = {
+      \ 'component': {
+      \   'readonly': '%{&readonly?"":""}',
+      \ },
+      \ 'separator': { 'left': '', 'right': '' },
+      \ 'subseparator': { 'left': '', 'right': '' }
+      \ }
