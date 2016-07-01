@@ -1,0 +1,11 @@
+# Define dotfile directories
+: ${DOTFILE_DIR:=~/.dotfiles}
+: ${DOTFILE_LOCAL_DIR:=~/.dotfiles-local}
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+# Global path exports
+# TODO: Add
+
+# Source local zshenv
+[ -f $DOTFILE_LOCAL_DIR/zshenv.local ] && source $DOTFILE_LOCAL_DIR/zshenv.local

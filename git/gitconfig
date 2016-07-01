@@ -8,6 +8,6 @@
 [color]
 	ui = auto
 [core]
-	excludesfile = ~/.gitignore.global
+	excludesfile = $DOTFILE_DIR/git/gitignore.global
 [include]
-	path = ~/.gitconfig.local
+	path = $DOTFILE_LOCAL_DIR/gitconfig.local

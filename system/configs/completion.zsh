@@ -1,10 +1,4 @@
-# fixme - the load process here seems a bit bizarre
-
-unsetopt menu_complete   # do not autoselect the first completion entry
-unsetopt flowcontrol
-setopt auto_menu         # show completion menu on succesive tab press
-setopt complete_in_word
-setopt always_to_end
+autoload -U compaudit compinit
 
 WORDCHARS=''
 
@@ -42,7 +36,6 @@ zstyle ':completion:*:cd:*' tag-order local-directories directory-stack path-dir
 
 # Use caching so that commands like apt and dpkg complete are useable
 zstyle ':completion::complete:*' use-cache 1
-zstyle ':completion::complete:*' cache-path $ZSH_CACHE_DIR
 
 # Don't complete uninteresting users
 zstyle ':completion:*:*:*:users' ignored-patterns \
@@ -71,3 +64,7 @@ if [[ $COMPLETION_WAITING_DOTS = true ]]; then
   zle -N expand-or-complete-with-dots
   bindkey "^I" expand-or-complete-with-dots
 fi
+
+# Initialize completions
+compinit -i -d $HOME/.zcompdump
+

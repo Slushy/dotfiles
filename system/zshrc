@@ -1,32 +1,9 @@
-autoload -U compaudit compinit
+# Load common config
+for cfgFile in $DOTFILE_DIR/system/configs/*.zsh; do
+    source $cfgFile
+done
 
-ZSH_CACHE_DIR="$HOME/dotfiles/system/cache/"
-
-# Add plugins to fpath
-
-# Save location of the current completion dump file.
-ZSH_COMPDUMP="$HOME/.zcompdump"
-
-# Functions
-source $HOME/dotfiles/system/functions/git.zsh
-
-# Config
-source $HOME/dotfiles/system/configs/aliases.zsh
-source $HOME/dotfiles/system/configs/editor.zsh
-source $HOME/dotfiles/system/configs/colors.zsh
-source $HOME/dotfiles/system/configs/prompt.zsh
-source $HOME/dotfiles/system/configs/keybindings.zsh
-source $HOME/dotfiles/system/configs/history.zsh
-source $HOME/dotfiles/system/configs/completion.zsh
-
-ENABLE_GIT_PROMPT=true
-
-# TODO: Finish implementing & restructuring zsh files
-PATH="/Library/Frameworks/Python.framework/Versions/3.5/bin:${PATH}"
-export PATH
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
-# Initialize completions
-compinit -i -d "${ZSH_COMPDUMP}"
+# Load local zshrc
+# - all local config overrides will go in here
+[ -f $DOTFILE_LOCAL_DIR/zshrc.local ] && source $DOTFILE_LOCAL_DIR/zshrc.local
 

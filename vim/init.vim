@@ -18,6 +18,7 @@ Plug 'airblade/vim-gitgutter'       " Shows visuals at each line in a file that 
 Plug 'itchyny/lightline.vim'        " visual bar at bottom of each file
 Plug 'Shougo/deoplete.nvim'         " nvim autocomplete
 Plug 'edkolev/tmuxline.vim'         " visual bar at bottom of terminal 
+Plug 'scrooloose/nerdcommenter'     " Helpful group commenter 
 
 call plug#end()
 
@@ -60,6 +61,12 @@ set hlsearch
 set ignorecase
 set smartcase
 
+" ==================== SWAP FILES =======================
+" Live on the edge.
+set noswapfile
+set nobackup
+set nowb
+
 " Use <ctrl-w> [hjkl] to select the active split
 nnoremap <silent> <C-h> <C-w>h
 nnoremap <silent> <C-j> <C-w>j
@@ -73,5 +80,5 @@ nnoremap <leader>f :NERDTreeFind<CR>
 
 " ------------- CUSTOM SETTINGS -------------
 " ===========================================
-source ~/dotfiles/vim/settings.vim
+source $DOTFILE_DIR/vim/settings.vim
 
